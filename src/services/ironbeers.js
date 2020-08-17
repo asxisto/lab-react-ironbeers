@@ -25,9 +25,9 @@ export const loadRandomBeer = () => {
   });
 };
 
-// export const loadSingleBeer = () => {
-//   return instance.get(`/beers/random`).then((response) => {
-//     const data = response.data;
-//     return data;
-//   });
-// };
+export const addNewBeer = (body) => {
+  return instance.post('/beers/new', body).then((response) => {
+    const data = response.data;
+    return data;
+  });
+};
